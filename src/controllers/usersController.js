@@ -57,7 +57,7 @@ const usersController ={
 
     registerFunction: function(req, res){
         const resultValidation = validationResult(req);
-
+        console.log(resultValidation)
         let mailInDB = User.findByField('email', req.body.email);
         let usernameInDB = User.findByField('username', req.body.username);
 
@@ -68,40 +68,43 @@ const usersController ={
                 name: 'styles', title: 'HOME'
             })
         }
+        else{
+            if(mailInDB){
+                return res.render('./user/register', {
+                    errors: {
+                        email:{
+                            msg: "Este mail ya esta en uso"
+                        }
+                    },
+                    oldData: req.body,
+                    name: 'styles', title: 'HOME'
+                })
+            }
+            if(usernameInDB){
+                return res.render('./user/register', {
+                    errors: {
+                        username:{
+                            msg: "Este nombre de usuario ya esta en uso"
+                        }
+                    },
+                    oldData: req.body,
+                    name: 'styles', title: 'Registro'
+                })
+            }
+    
+            delete req.body.pswRepeat;
+            let userToCreate = {
+                ...req.body,
+                password: bcrypt.hashSync(req.body.password)
+            }
+            User.create(userToCreate)
+            delete userToCreate.password;
+                    req.session.userLogged = userToCreate;
+                    res.cookie('username', req.body.username, {maxAge: (1000 * 60) * 15})
+                    res.redirect('/user/profile')
+        }
         
-        if(mailInDB){
-            return res.render('./user/register', {
-                errors: {
-                    email:{
-                        msg: "Este mail ya esta en uso"
-                    }
-                },
-                oldData: req.body,
-                name: 'styles', title: 'HOME'
-            })
-        }
-        if(usernameInDB){
-            return res.render('./user/register', {
-                errors: {
-                    username:{
-                        msg: "Este nombre de usuario ya esta en uso"
-                    }
-                },
-                oldData: req.body,
-                name: 'styles', title: 'Registro'
-            })
-        }
-
-        delete req.body.pswRepeat;
-        let userToCreate = {
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password)
-        }
-        User.create(userToCreate)
-		delete userToCreate.password;
-                req.session.userLogged = userToCreate;
-                res.cookie('username', req.body.username, {maxAge: (1000 * 60) * 15})
-                res.redirect('/user/profile')
+        
              
     },
 
