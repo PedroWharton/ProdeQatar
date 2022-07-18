@@ -1,21 +1,40 @@
-<header class="header-main">
-    <section class="container-logo">
-        <img src="" alt="">
-    </section>
+<header class="header-principal">
+    <div class="header-main">
+        <section class="container-logo">
+            <img src="/img/LOGO-QATAR.png" alt="">
+        </section>
+        <section class="menu-burguer">
+                <i class="fa-solid fa-bars"></i>
+        </section>
+    </div>
     <nav class="container-menu">
         <ul class="access-nav">
             <li>
-                <a href=""></a>
+                <a href="">Predicciones</a>
             </li>
             <li>
-                <a href=""></a>
+                <a href="">Calendario</a>
             </li>
             <li>
-                <a href=""></a>
+                <a href="">Tablas</a>
             </li>
             <li>
-                <a href=""></a>
+                <a href="">Etc</a>
             </li>
         </ul>
     </nav>
+        <section>
+            <% if (locals.isLogged) { %>
+                <div class="user">
+                    <a href="/users/profile">
+                        <img src="/img/avatars/<%= locals.userLogged.avatar %>" width="20" height="20" style="border-radius: 100%;">
+                    </a>
+                </div>
+            <% } else { %>
+                <div class="user">
+                    <a href="/users/login">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+            <% } %>
+        </section>
 </header>
