@@ -6,6 +6,16 @@
 
 ### donde ver prodes para ideas: Prode de League of Legends, Counter Strike, Gran DT, prodes rusia 2018
 
-### POR VER: planificacion vistas funcionamiento
+#### POR VER: planificacion vistas funcionamiento
 
-#### Hola esto todo ok
+
+# VISTAS:
+### -HOME
+### -LOG IN
+### -REGISTER
+### -PERFIL
+### -PERFIL AMIGO
+### -CALENDARIO
+### -LISTAR
+### -REGLAS
+### -PRODE 
