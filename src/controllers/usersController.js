@@ -8,9 +8,9 @@ const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController ={
-    detail: function(req, res){
+    profile: function(req, res){
         let userLogged = req.session.userLogged
-        res.render('./user/detail', {user: userLogged, name: 'styles', title: 'Detalle'})
+        res.render('./user/profile', {user: userLogged, name: 'styles', title: 'Detalle'})
     },
 
     login: function(req, res){
@@ -25,7 +25,7 @@ const usersController ={
                 delete userLogged.password;
                 req.session.userLogged = userLogged;
                 res.cookie('username', req.body.username, {maxAge: (1000 * 60) * 15})
-                res.redirect('/user/detail')
+                res.redirect('/user/profile')
             }
             else{
                 res.render('./user/login', {
@@ -101,7 +101,7 @@ const usersController ={
 		delete userToCreate.password;
                 req.session.userLogged = userToCreate;
                 res.cookie('username', req.body.username, {maxAge: (1000 * 60) * 15})
-                res.redirect('/user/detail')
+                res.redirect('/user/profile')
              
     },
 

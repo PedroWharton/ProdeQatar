@@ -36,13 +36,13 @@
         <section>
             <% if (locals.isLogged) { %>
                 <div class="user">
-                    <a href="/users/profile">
+                    <a href="/user/profile">
                         <img src="/img/avatars/<%= locals.userLogged.avatar %>" width="20" height="20" style="border-radius: 100%;">
                     </a>
                 </div>
             <% } else { %>
                 <div class="user">
-                    <a href="/users/login">
+                    <a href="/user/login">
                         <i class="fa-solid fa-user"></i>
                     </a>
             <% } %>

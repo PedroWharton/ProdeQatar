@@ -14,7 +14,7 @@ router.post('/login', usersController.loginFunction);
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', registerValidations, usersController.registerFunction);
 
-router.get('/detail', authMiddleware, usersController.detail);
+router.get('/profile', authMiddleware, usersController.profile);
 
 router.get('/logout', usersController.logout);
 
