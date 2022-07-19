@@ -18,26 +18,57 @@
     padding-left: 36px;
 }
 
-
 .container-logo img{
     width: 104.8px;
     height: 67.94px;
 }
 
-
 .menu-burguer {
     margin-right: 32px;
 }
+
 .menu-burguer i {
     color: #E1E2E1;
     font-size: 24px;
 }
+
 .container-menu {
     display: none;
 }
+
 .container-menu .access-nav {
     text-decoration: none;
     list-style: none;
+}
+
+.search{
+    width: 200px;
+    position: relative;
+    max-width: none;
+}
+
+.search form{
+    width: 100%;
+}
+
+.searchbox input{
+    width: 100%;
+    height: auto;
+    margin: 1px 0px;
+    outline: none;   
+    padding-left: 5px;
+    border-radius: 6.4px; 
+}
+
+.submit{
+    color: black;
+    position: absolute;
+    bottom: 4px;
+    top: 4px;
+    right: 4px;
+    outline: none;
+    border: none;
+    background-color: white;
 }
 
 .user {
@@ -53,15 +84,16 @@
         width: 100%;
     }
     .header-main {
-        width: 5%;
+        width: 110px;
     }
 
     .menu-burguer {
         display: none;
     }
     .container-menu {
-        width: 60%;
+        width: 80%;
         display: flex;
+        align-items: center;
     }
 
     .container-menu .desktop-link{
