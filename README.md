@@ -10,7 +10,7 @@
 
 
 # VISTAS:
-### -HOME
+### -HOME (agregar buscardor)
 ### -LOG IN
 ### -REGISTER
 ### -PERFIL
