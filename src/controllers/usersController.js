@@ -10,11 +10,11 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const usersController ={
     profile: function(req, res){
         let userLogged = req.session.userLogged
-        res.render('./user/profile', {user: userLogged, name: 'styles', title: 'Detalle'})
+        res.render('./user/profile', {user: userLogged, name: 'profile', title: 'Detalle'})
     },
 
     login: function(req, res){
-        res.render('./user/login', {name: 'styles', title: 'Login'});
+        res.render('./user/login', {name: 'register', title: 'Login'});
     },
 
     loginFunction: function(req, res){
@@ -52,7 +52,7 @@ const usersController ={
     },
 
     register: function(req, res){
-        res.render('./user/register', {name: 'styles', title: 'Registro'});
+        res.render('./user/register', {name: 'register', title: 'Registro'});
     },
 
     registerFunction: function(req, res){
