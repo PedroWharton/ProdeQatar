@@ -1,0 +1,10 @@
+[
+ {
+  "id": 1,
+  "username": "pedrowharton",
+  "email": "pedrowharton@gmail.com",
+  "password": "$2a$10$5nd9.p8WHp5srEVv0MpZhu1MacUG936W9pjMPrfEdz5kzFwCJGzXy",
+  "avatar": "Logo.jpeg",
+  "admin": true
+ }
+]

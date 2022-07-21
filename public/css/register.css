@@ -1,0 +1,23 @@
+main{
+    padding: 8px;
+}
+
+label{
+    margin-left: 12px;
+}
+
+.register-button{
+    background-color: #E1E2E1;
+}
+
+div p{
+    text-align: center;
+    margin-top: 4px;
+}
+
+@media (min-width: 769px){
+    form{
+        width: 60%;
+        margin: auto;
+    }
+}

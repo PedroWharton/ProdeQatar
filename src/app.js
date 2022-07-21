@@ -9,9 +9,8 @@ const session = require('express-session');
 
 //REQUIRE
 const mainRouter = require('./routes/mainRouter');
-//const productsRouter = require('./routes/productsRouter');
-//const usersRouter = require('./routes/usersRouter');
-//const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');  TODAVIAN NO ESTAN CREADO 
+const usersRouter = require('./routes/usersRouter');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 
 
@@ -30,7 +29,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
-//app.use(userLoggedMiddleware) TODAVIA NO ESTAN CREADO
+app.use(userLoggedMiddleware)
 
 
 //SERVIDOR
@@ -40,5 +39,4 @@ app.listen(process.env.PORT || 3000, function(){
 
 //ROUTES
 app.use('/', mainRouter);
-//app.use('/products', productsRouter);  TODAVIA NO ESTAN
-//app.use('/user', usersRouter);
+app.use('/user', usersRouter);
