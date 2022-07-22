@@ -22,12 +22,6 @@
     justify-content: space-between;
     align-items: center;
 }
-.container-logo {
-    width: 30%;
-}
-.container-logo img {
-    width: 100%;
-}
 .menu-burguer {
     margin-right: 20px;
 }
