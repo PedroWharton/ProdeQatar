@@ -1,13 +1,141 @@
 /* HEADER */
 /* PRUEBA */
 /* guinda : #860037;
-   oscuro : #530011;
-   gris : #E1E2E1;
-   gris claro : #F5F5F6;
+    gris : #E1E2E1;
+    gris claro : #F5F5F6;
     */
+
+:root {
+    --color-principal: #530011;
+    --color-secundario: #fff;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.header-principal {
+    width: 100%;
+    background-color: var(--color-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-logo {
+    width: 30%;
+}
+.container-logo img {
+    width: 100%;
+}
+.menu-burguer {
+    margin-right: 20px;
+}
+.menu-burguer i {
+    color: var(--color-secundario);
+    font-size: 24px;
+}
+.container-menu {
+    display: none;
+}
+.container-menu .access-nav {
+    text-decoration: none;
+    list-style: none;
+}
+.access-nav li a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+.user {
+    display: none;
+}
+.user i{
+    color: var(--color-secundario);
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+}
+.container-about {
+    text-transform: uppercase;
+}
+.container-about h3 {
+    font-size: 16px;
+    list-style: none;
+}
+.container-about a {
+    text-decoration: none;
+}
+.container-about p {
+    margin: 10px;
+    font-size: 12px;
+    color: var(--color-secundario);
+}
+.container-social-media {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 0;
+}
+.container-social-media div a i {
+    font-size: 20px;
+    padding: 10px;
+    color: var(--color-secundario);
+    border: 1px solid ;
+    border-radius: 50%;
+}
+
+/* MEDIAQUERIES */
+@media (min-width: 769px) {
+    .header-principal {
+        width: 100%;
+    }
+    .header-main {
+        width: 20%;
+    }
+    .container-logo {
+        width: 100%;
+    }
+    .menu-burguer {
+        display: none;
+    }
+    .container-menu {
+        width: 60%;
+        display: flex;
+    }
+    .access-nav {
+        padding: 0px;
+        margin: 0px;
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .user {
+        display: block;
+        margin-right: 24px;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer section {
+        width: 33%;
+        align-self: center;
+    }
+    .redes {
+        order: 1;
+    }
+    .container-social-media div:hover i {
+        color: var(--color-principal);
+        background-color: var(--color-secundario);
+        transition-duration: 0.5s;
+    }
 }
