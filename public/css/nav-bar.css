@@ -117,7 +117,7 @@
     .container-menu .desktop-link a p{
         color: white;
         font-size: 18px;
-        font-weight: 700;
+        text-transform: uppercase;
         padding: 7.5px 16px;
         text-align: center;
         margin: auto;
