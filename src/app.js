@@ -10,6 +10,7 @@ const session = require('express-session');
 //REQUIRE
 const mainRouter = require('./routes/mainRouter');
 const usersRouter = require('./routes/usersRouter');
+const predictionsRouter = require('./routes/predictionsRouter');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 
@@ -40,3 +41,4 @@ app.listen(process.env.PORT || 3000, function(){
 //ROUTES
 app.use('/', mainRouter);
 app.use('/user', usersRouter);
+app.use('/predictions', predictionsRouter);

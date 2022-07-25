@@ -149,4 +149,22 @@
         display: block;
         margin-right: 32px;
     }
+
+    .user a{
+        text-decoration: none;
+        color: #FFFF;
+    }
+
+    .user a p{
+        padding: 7.5px 16px;
+        background-color: RGBA(225, 226, 225, 0.5);
+        white-space: nowrap;
+        text-transform: uppercase;
+        border-radius: 6.4px;
+
+    }
+    .user a p:hover{
+        background-color: RGBA(225, 226, 225, 0.8);
+        transition-duration: 0.5s;
+    }
 }

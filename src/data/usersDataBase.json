@@ -6,5 +6,12 @@
   "password": "$2a$10$5nd9.p8WHp5srEVv0MpZhu1MacUG936W9pjMPrfEdz5kzFwCJGzXy",
   "avatar": "Logo.jpeg",
   "admin": true
+ },
+ {
+  "id": 2,
+  "username": "ijanka",
+  "email": "ignacio.jankauskas60@gmail.com",
+  "password": "$2a$10$/GjD0Ryf27dGUemDpfxyCe.K.Fu42PoKcUGxS5OU92lCTyBGslgpm",
+  "admin": false
  }
 ]

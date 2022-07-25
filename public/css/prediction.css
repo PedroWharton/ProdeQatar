@@ -1,0 +1,36 @@
+main{
+    background-color: #E1E2E1;
+}
+
+.title{
+    font-weight: 100;
+    font-size: 42px;
+}
+
+section{
+    width: 50%;
+}
+
+.header{
+    display: flex;
+    background-color: RGBA(83, 0, 17, 0.5);
+    align-items: center;
+}
+
+.header .teams{
+    display: flex;
+}
+
+.header .teams .country{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.country img{
+    width: 30%;
+}
+
+.country p{
+
+}
