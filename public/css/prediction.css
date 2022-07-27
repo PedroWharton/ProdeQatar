@@ -2,35 +2,112 @@ main{
     background-color: #E1E2E1;
 }
 
+main .groups{
+    width: 90%;
+    margin: auto;
+}
+
 .title{
+    width: 90%;
     font-weight: 100;
     font-size: 42px;
 }
 
-section{
-    width: 50%;
+.header{
+    background-color: rgba(83, 0, 17, 0.5);
+    display: flex;
+    align-items: center;
+    border-bottom: solid 5px rgba(83, 0, 17, 1);
 }
 
-.header{
+.group-title{
     display: flex;
-    background-color: RGBA(83, 0, 17, 0.5);
+    flex-direction: column;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.group-title h2{
+    margin: 0;
+}
+
+.group-title h3{
+    margin: 0;
+}
+
+.teams{
+    background-color: rgba(83, 0, 17, 0.6);
+    height: 65px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.header .teams{
-    display: flex;
-}
-
-.header .teams .country{
+.country{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .country img{
-    width: 30%;
+    width: 40px;
 }
 
 .country p{
+    display: none;
+    margin: 0;
+}
 
+.matches{
+    background-color: #ffff;
+}
+
+.match{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.match-country{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.match-country img{
+    width: 30px;
+}
+
+.match-country p{
+    margin: 0px;
+}
+
+form{
+    display: flex;
+}
+
+input{
+    width: 35px;
+    margin: 0 10px;
+}
+
+@media (min-width: 769px){
+    .groups{
+        display: flex;
+    }
+
+    .group{
+        width: 50%;
+        margin-left: 5px;
+    }
+
+    .country p{
+        display: block  ;
+    }
+
+    input{
+        width: 50px;
+    }
 }
